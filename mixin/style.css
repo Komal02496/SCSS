@@ -1,0 +1,27 @@
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: mediumvioletred;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 50px auto;
+  transition: all 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  transform: scale(1.2);
+}
+
+.box2 {
+  height: 200px;
+  width: 200px;
+  background-color: mediumvioletred;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 50px auto;
+  background-color: yellowgreen;
+  height: 100px;
+  width: 100px;
+}/*# sourceMappingURL=style.css.map */
