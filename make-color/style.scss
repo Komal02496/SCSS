@@ -1,0 +1,47 @@
+@use 'sass:color'; 
+@use 'sass:map';
+// color 
+    $colors: (red, black, brown);
+    
+   
+    @each $color in $colors {
+     
+      @for $i from 1 through 10 {
+        .bg-#{$color}-#{$i*100} {
+          background-color: color.change($color, $whiteness: 100% - $i * 10%);
+        }
+      }
+    }
+
+
+    // height 
+@for $i from 1 through 10
+{
+  .h-#{$i*5}{
+     height: $i*40px;
+  }
+}    
+
+
+  // with 
+@for $i from 1 through 10{
+  .w-#{$i*5}{
+    width: $i *40px;
+  }
+}
+
+// map
+
+$bora:(
+  xs:3px,
+  s:6px,
+  m:8px,
+  l:12px,
+  xl:16px,
+  2xl:20px,
+  3xl:24px
+);
+
+.box{
+  border-radius:map-get($bora ,"m");
+}
