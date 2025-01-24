@@ -1,0 +1,192 @@
+@use "units/variables" as var;
+@use "units/mixin" as mix;
+@use "units/color" as col;
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+ 
+}
+
+/* nav bar start */
+.nev-bar{
+    @include mix.f-space-between();
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .nav {
+        @include mix.f-center();
+
+        .nav-option{
+            margin-right: 50px;
+         }
+     }
+
+    .nav-button{
+        margin-right: 30px;
+        background-image: col.$primary-bg-liner;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        color: col.$primary-color;
+        font-weight: var.$secondary-font-weight;
+        
+        @include mix.hover-effect()
+        
+    }
+    
+    .logo>img{
+        margin-left: 20PX;
+    }
+}
+
+/* hero-section  start*/
+
+.hero-section{
+    @include mix.f-center();
+
+    .hero-section-btn{
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: col.$bl-color;
+        margin-top: 70px;
+        color:col.$primary-color; 
+        font-size: var.$font-size-16;
+        font-weight:var.$secondary-font-weight;
+    
+        @include mix.hover-effect();
+    }
+    
+    .hero-section-image>img{
+        height: 300px;
+        width: 400px;
+        margin-right: 20px;
+        margin-left: 60px;
+    }
+
+    .text-decoration{
+        background-clip: text;
+        background-image: col.$secondary-bg-liner;
+        color: transparent;
+        font-size: var.$font-size-25;
+    }
+    .hero-section-text>h2{
+        font-weight: var.$primary-font-weight;
+    }
+}
+
+// service card start 
+
+.card{
+    display: flex;
+
+    .service-card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    transition: all 300ms;
+
+    @include mix.services-card-hover();
+  
+    .service-card-title{
+        font-weight: var.$secondary-font-weight;
+        font-size: var.$font-size-18;
+        margin-top: 10px;
+        margin-bottom: 10px;   
+     
+    }
+
+    .service-card-content{
+        font-size: var.$font-size-14;
+        font-weight: var.$primary-font-weight;
+    }
+    
+
+    .logo-service>img{
+        height: 70px;
+        width: 70px;
+    }
+        
+}
+}
+
+/* footer start  */
+.footer{
+    @include mix.f-space-evenly();
+    margin-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: col.$primary-color;
+
+    .footer-content{
+        width: 200px;
+        font-size: var.$font-size-14;
+        margin-top: 6px;
+        font-weight: var.$primary-font-weight;
+    
+    }
+
+    .contact-us{
+        width: 200px;
+    }
+    
+    .social-title{
+        font-size: var.$font-size-18;
+        font-weight: var.$secondary-font-weight;
+        margin-bottom: 7px;
+        display: block;
+    }
+    
+    .fa-brands{
+        margin-right: 20px;
+        font-size: var.$font-size-22;
+        padding-left: 5px;
+        position: relative;
+        left: 15px;
+    }
+    .contact-us-address{
+        font-size: var.$font-size-14;
+        margin-top: 6px;
+        font-weight: var.$primary-font-weight;
+        margin-bottom: 6px;
+    }
+    .contact-us-number{
+        font-size: var.$font-size-14;
+        font-weight: var.$primary-font-weight;
+    }
+    
+    .link-name{
+        font-size: var.$font-size-14;
+        margin-top: 6px;
+        font-weight: var.$primary-font-weight;
+    }
+}
+
+
+
+
+/* Copyright  */
+.copy-right{
+    padding: 20px;
+    text-align: center;
+    font-size: var.$font-size-12;
+    font-weight: var.$primary-font-weight;
+    letter-spacing: 1px;
+    background-color:col.$primary-color;
+}
+
+.line{
+    height: 1px;
+    width: 100%;
+    text-decoration: underline;
+    background-color: #cccccc;
+}
